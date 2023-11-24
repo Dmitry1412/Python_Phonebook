@@ -1,4 +1,4 @@
-from phone_func import show_all_contacts, find_contact, add_contact, count_lines, change_contact, delete_contact 
+from phone_func import show_contacts, find_contact, add_contact, count_lines, change_contact, delete_contact 
 
 def main():
     file_name = 'phone_book.txt'
@@ -11,7 +11,7 @@ def main():
         print('d - удалить контакт')
         answer = input('Введите операцию или Х для выхода: ')
         if answer == 's':
-            show_all_contacts(file_name)
+            show_contacts(file_name)
         elif answer == 'f':
             find_contact(file_name)
         elif answer == "a":

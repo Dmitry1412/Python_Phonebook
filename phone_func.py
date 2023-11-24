@@ -1,14 +1,16 @@
 #from phone_func import show_all_contacts, find_contact, add_new_contact, change_contact, delete_contact
 
 # s - показать контакты - complete
-def show_all_contacts(file_name: str):
-    pass
-    # with open(file_name, 'r',encoding = 'utf-8') as file:
-    #     for line in file:
-    #         tmp = file.read(line)
-    #         print(tmp.split(',')[1][2][3][4])
-            #print(file.read())
-        #print(file.readline())
+def show_contacts(file: str):
+    print('*'*25)
+    with open(file,encoding = 'utf-8') as f:
+        for line in f:
+            data = eval(line)
+            num = list(data.keys())
+            data = list(data.values())
+            
+            print(f'Фамилия: {data[0][0]}, Имя: {data[0][1]}, Отчество: {data[0][2]}, Телефон: {data[0][3]}')
+    print('*'*25)
         
 # f - найти контакт
 def find_contact(file_name: str):
