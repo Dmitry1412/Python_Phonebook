@@ -24,7 +24,7 @@ def count_lines(file: str):
                 pass
             return i + 1
         except:
-            return 1
+            return 0
 
 def add_contact(file: str):
     print('Для создания новой записи в телефонной книге введите пожалуйста фамилию, имя, отчество и номер телефона')
