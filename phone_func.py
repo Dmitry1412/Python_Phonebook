@@ -18,7 +18,6 @@ def find_contact(file_name: str):
 
 
 # a - добавить запись
-
 def count_lines(file: str):
     with open(file) as f:
         try:
@@ -38,6 +37,9 @@ def add_contact(file: str):
     new_dict = {count_lines(file): [l_name, f_name, p_name, phone_num]}
     with open(file,'a',encoding='UTF-8') as f:
         f.write(f'{new_dict}\n')
+    print('*'*25)
+    print("Контакт добавлен")
+    print('*'*25)
         
 # c - изменить контакт
 def change_contact(file_name: str):
